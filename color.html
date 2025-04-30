@@ -1,0 +1,441 @@
+<head>
+	<title>RGB - 2 Ratio</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<style>
+	@font-face {
+		font-family: nunito;
+		src: url(nunito.ttf);
+	}
+	* {
+		font-family: nunito;
+	}
+	p {
+		margin-bottom: 0px;
+	}
+	p:not(.name){
+		font-size: 80%;
+		font-weight: 600;
+		line-height: 12px;
+	}
+	.container > div {
+		box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+		border-radius: 15px;
+		display: flex;
+		position: relative;
+		height: 60px;
+		margin-bottom: 20px;
+	}
+	.color {
+		width: 70px;
+		height: 70%;
+		top: 50%;
+		position: relative;
+		transform: translateY(-50%);
+		background: red;
+		border-radius: 5px;
+		box-shadow: 0px 3px 5px rgba(0,0,0,0.3);
+		margin-left: 10px;
+	}
+	.text {
+		margin-left: 7px;
+	}
+	.name {
+		font-weight: 900;
+		font-size: 120%;
+		margin-top: 5px;
+		line-height: 25px;
+	}
+	.world {
+		background: black;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		right: 5px;
+		bottom: 5px;
+		border-radius: 100%;
+	}
+	.world div {
+		width: 45%;
+		height: 45%;
+		border-radius: 100%;
+		position: absolute;
+		transform: translateX(-50%);
+	}
+	.world div:nth-child(1) {
+		background: #f00;
+		left: 73%;
+		bottom: 15%;
+	}
+	.world div:nth-child(2) {
+		background: #0f0;
+		left: 50%;
+		top: 2%;
+	}
+	.world div:nth-child(3) {
+		background: #00f;
+		left: 27%;
+		bottom: 15%;
+	}
+</style>
+
+<body>
+	<div class="container my-3">
+		<div>
+			<div class="color" style="background: #f00"></div>
+			<div class="text">
+				<p class="name">RED</p>
+				<p>255, 0, 0</p>
+				<p>#f00</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #fa0"></div>
+			<div class="text">
+				<p class="name">ORANGE</p>
+				<p>255, 170, 0</p>
+				<p>#fa0</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #ff0"></div>
+			<div class="text">
+				<p class="name">YELLOW</p>
+				<p>255, 255, 0</p>
+				<p>#ff0</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #af0"></div>
+			<div class="text">
+				<p class="name">LIME</p>
+				<p>170, 255, 0</p>
+				<p>#af0</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #0f0"></div>
+			<div class="text">
+				<p class="name">GREEN</p>
+				<p>0, 255, 0</p>
+				<p>#0f0</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #0fa"></div>
+			<div class="text">
+				<p class="name">AQUA</p>
+				<p>0, 255, 170</p>
+				<p>#0fa</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #0ff"></div>
+			<div class="text">
+				<p class="name">CYAN</p>
+				<p>0, 255, 255</p>
+				<p>#0ff</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #0af"></div>
+			<div class="text">
+				<p class="name">TURQUOISE</p>
+				<p>0, 170, 255</p>
+				<p>#0af</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #00f"></div>
+			<div class="text">
+				<p class="name">BLUE</p>
+				<p>0, 0, 255</p>
+				<p>#00f</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #a0f"></div>
+			<div class="text">
+				<p class="name">VIOLET</p>
+				<p>170, 0, 255</p>
+				<p>#a0f</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #f0f"></div>
+			<div class="text">
+				<p class="name">MAGENTA</p>
+				<p>255, 0, 255</p>
+				<p>#f0f</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #f0a"></div>
+			<div class="text">
+				<p class="name">PINK</p>
+				<p>255, 0, 170</p>
+				<p>#f0a</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #000"></div>
+			<div class="text">
+				<p class="name">BLACK</p>
+				<p>0, 0, 0</p>
+				<p>#000</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #aaa"></div>
+			<div class="text">
+				<p class="name">GRAY</p>
+				<p>170, 170, 170</p>
+				<p>#aaa</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #fff"></div>
+			<div class="text">
+				<p class="name">WHITE</p>
+				<p>255, 255, 255</p>
+				<p>#fff</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #a00"></div>
+			<div class="text">
+				<p class="name">DARK RED</p>
+				<p>170, 0, 0</p>
+				<p>#a00</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #aa0"></div>
+			<div class="text">
+				<p class="name">DARK YELLOW</p>
+				<p>170, 170, 0</p>
+				<p>#aa0</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #0a0"></div>
+			<div class="text">
+				<p class="name">DARK GREEN</p>
+				<p>0, 170, 0</p>
+				<p>#0a0</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #0aa"></div>
+			<div class="text">
+				<p class="name">DARK CYAN</p>
+				<p>0, 170, 170</p>
+				<p>#0aa</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #00a"></div>
+			<div class="text">
+				<p class="name">DARK BLUE</p>
+				<p>0, 0, 170</p>
+				<p>#00a</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #a0a"></div>
+			<div class="text">
+				<p class="name">DARK MAGENTA</p>
+				<p>170, 0, 170</p>
+				<p>#a0a</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #faa"></div>
+			<div class="text">
+				<p class="name">LIGHT RED</p>
+				<p>255, 170, 170</p>
+				<p>#faa</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #ffa"></div>
+			<div class="text">
+				<p class="name">LIGHT YELLOW</p>
+				<p>255, 255, 170</p>
+				<p>#ffa</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #afa"></div>
+			<div class="text">
+				<p class="name">LIGHT GREEN</p>
+				<p>170, 255, 170</p>
+				<p>#afa</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0.67"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #aff"></div>
+			<div class="text">
+				<p class="name">LIGHT CYAN</p>
+				<p>170, 255, 255</p>
+				<p>#aff</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 1"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #aaf"></div>
+			<div class="text">
+				<p class="name">LIGHT BLUE</p>
+				<p>170, 170, 255</p>
+				<p>#aaf</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+		<div>
+			<div class="color" style="background: #faf"></div>
+			<div class="text">
+				<p class="name">LIGHT MAGENTA</p>
+				<p>255, 0, 255</p>
+				<p>#faf</p>
+			</div>
+			<div class="world">
+				<div style="opacity: 1"></div>
+				<div style="opacity: 0.67"></div>
+				<div style="opacity: 1"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+</script>
